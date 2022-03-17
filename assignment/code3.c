@@ -1,52 +1,24 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <time.h>
 
-#include<fcntl.h>
-
-#include<unistd.h>
-
-#include<sys/stat.h>
-
-#include<sys/types.h>
-
-#include<time.h>
-
-int main ()
+int main()
 {
+    struct stat st1;
 
-  struct stat st;		// st.st_size st.st_ino st_blksize
+    stat("code1.c", &st1);
 
-  
-
-  
-
-
-
-  stat ("code1.c", &st);		//
-
-  printf ("File size = %lu\n", (st.st_size));
-
-  printf ("File inode = %lu\n", st.st_ino);
-
-  printf ("size disc of blocks = %lu\n", st.st_blksize);
-
-  printf ("No. of 512 byte blocks allocated = %d\n", st.st_blocks);
-
-  printf ("Permissions = %lo\n", st.st_mode);
-
-  printf ("Owner id = %lu\n", st.st_uid);
-
-  printf ("Group id = %lu\n", st.st_gid);
-
-  printf ("Last modified time = %s\n", ctime (&st.st_mtime));
-
-  printf ("Last accessed time = %s\n", ctime (&st.st_atime));
-
-
-
-  printf ("\n");
-
-
-  return 0;
-
+    printf("file size: %lu\n", st1.st_size);
+    printf("file inode: %lu\n", st1.st_ino);
+    printf("size disc of blocks = %lu\n", st1.st_blksize);
+    printf("No. of 512 byte blocks allocated = %d\n", st1.st_blocks);
+    printf("Permissions = %o\n", st1.st_mode);
+    printf("Owner id = %lu\n", st1.st_uid);
+    printf("Group id = %lu\n", st1.st_gid);
+    printf("Last modified time = %s\n", ctime(&st1.st_mtime));
+    printf("Last accessed time = %s\n", ctime(&st1.st_atime));
+    printf("\n");
+    return 0;
 }
 
