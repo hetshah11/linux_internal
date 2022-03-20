@@ -24,15 +24,15 @@ int main()
 		pthread_attr_init(&Attr);
 
 		pthread_attr_getstacksize(&Attr,&Siz);
-		pthread_attr_getstackaddr(&Attr,&stk);
+		pthread_attr_getstackaddr(&Attr,&Stk);
 
 		printf("Default: Addr=%08x default size=%d\n",Stk,Siz);
 
-		my_stack=(void*)malloc(my_stksize);
+		my_stack=malloc(my_stksize);
 
-		pthread_attr_setstack(&Attr, my_stack, my_stktsize);
+		pthread_attr_setstack(&Attr, my_stack, my_stksize);
 
-		pthread_create(&Id,&Attr,proc,NULL);
+		pthread_create(&Id,&Attr,Proc,NULL);
 
 		pthread_attr_getstack(&Attr,&Stk,&Siz);
 		

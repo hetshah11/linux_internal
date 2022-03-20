@@ -4,8 +4,12 @@
 
 void *PrintHello(void *threadid)
 	{
-		printf("\nHello World!\n");
-		while(1);
+		do
+		{
+			printf("\nHello World!\n");
+		}while(1);
+		
+		
 	}
 
 int main()
@@ -25,4 +29,6 @@ int main()
 				printf("\nCanceled thread\n");
 			}
 		printf("\nThread ID: %u\n",thread);
+
+		return 0;
 	}

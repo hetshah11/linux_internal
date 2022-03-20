@@ -6,8 +6,8 @@ static void* threadFunc(void *arg)
 	{
 		char *s =(char*)arg;
 		printf("%s\n",s);
-		sleep(5);
-		return (void*)strlen(s);
+		//sleep(5);
+		//return (void*)strlen(s);
 		return 0;
 	}
 

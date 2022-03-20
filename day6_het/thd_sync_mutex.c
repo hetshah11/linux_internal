@@ -6,12 +6,15 @@ int sharedVar=5;
 
 pthread_mutex_t my_mutex;
 
+
 void *thread_inc(void *arg)
 	{
 		pthread_mutex_lock(&my_mutex);
 		sharedVar++;
 		pthread_mutex_unlock(&my_mutex);
 	}
+
+	
 
 void* thread_decr(void *arg)
 	{

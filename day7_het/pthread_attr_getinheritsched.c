@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 					break;
 			}
 
-		printf("Process creating thread whose schd policy ")
+		printf("Process creating thread whose schd policy ");
 		
 		
 

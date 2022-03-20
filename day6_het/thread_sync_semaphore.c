@@ -12,6 +12,7 @@ void *thread_inc(void *arg)
 		sharedVar++;
 		printf("After incr =%d\n",sharedVar);
 		sem_post(&my_sem);
+		
 	}
 
 void *thread_dec(void *arg)
