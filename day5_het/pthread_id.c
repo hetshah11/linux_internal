@@ -9,7 +9,7 @@ void *thr_fn(void *arg)
 		pthread_t tid;
 		pid=getpid();
 		tid=pthread_self();
-		printf("pid %u ttd %u \n",(unsigned int)pid,(unsigned int)tid);
+		printf("pid %u tid %u \n",(unsigned int)pid,(unsigned int)tid);
 		return 0;
 	}
 
@@ -20,7 +20,7 @@ int main()
 
 		err =pthread_create(&tid,NULL,thr_fn,NULL);
 
-		if(err!=0)
+		if(err)
 			{
 				printf("can't create thread: %s\n",sterror(err));
 			}
