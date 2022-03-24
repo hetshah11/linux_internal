@@ -7,7 +7,7 @@
 
 
 
-static pthread_spinlock_t spinlock;
+// static pthread_spinlock_t spinlock;
 volatile int slock;
 
 void *spinlockThread(void *i)

@@ -41,6 +41,8 @@ printf("\n --------------Main thread \n Policy: %d \t priority: %d\n", policy, p
 policy=SCHED_FIFO;
 param.sched_priority=3;
 
+
+
 ret = pthread_setschedparam(pthread_self(),policy,&param);
 
 if(ret!=0)

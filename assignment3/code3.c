@@ -17,9 +17,11 @@ int main()
         pthread_attr_t attribute;
         size_t size;
         void *addr;
+        pthread_attr_init(&attribute);
 
-        pthread_attr_getstack(&attribute,&addr,&size);
-        printf("Default address = %lu\nDefault size= %lu\n",addr,size);
+        pthread_attr_getstacksize(&attribute,&size);
+        pthread_attr_getstackaddr(&attribute,&addr);
+        printf("Default address = %08x\nDefault size= %d\n",addr,size);
 
         size_t newsize;
         void *newaddr;
@@ -37,6 +39,8 @@ int main()
         pthread_attr_getstack(&attribute,&addr,&size);
 
         printf("New address = %p\nNew size= %lu\n",addr,size);
+
+        pthread_attr_destroy(&attribute);
 
         // pthread_join(tid,NULL);
         sleep(1);
