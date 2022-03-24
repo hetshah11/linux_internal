@@ -4,7 +4,7 @@
 struct char_print_params
     {
         char character;
-        int count
+        int count;
     };
 
 void *char_print(void *parameters)

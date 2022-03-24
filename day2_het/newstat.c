@@ -8,5 +8,5 @@ int main()
 	{
 		struct stat s1;
 		int fd;
-		stat("lssek.c",&st);
+		stat("lssek.c",&s1);
 	}

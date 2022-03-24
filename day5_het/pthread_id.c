@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<pthread.h>
 
 pthread_t tid;
@@ -22,7 +23,7 @@ int main()
 
 		if(err)
 			{
-				printf("can't create thread: %s\n",sterror(err));
+				printf("can't create thread: %s\n",strerror(err));
 			}
 
 		while(1);

@@ -2,12 +2,16 @@
 #include<stdlib.h>
 #include<pthread.h>
 
-static void* threadFunc(void *arg)
+static int threadFunc(void *arg)
 	{
 		char *s =(char*)arg;
 		printf("%s\n",s);
 		//sleep(5);
-		//return (void*)strlen(s);
+		//void *ptr;
+		//int i=strlen(s);
+		//ptr=&i;
+		//return i;
+		return (void*)strlen(s);
 		return 0;
 	}
 
@@ -16,7 +20,7 @@ int main(int argc, char *argv[])
 		pthread_t t1;
 		void *res;
 		int s;
-		pthread_create(&t1,NULL,threadFunc,"Hello world");
+		pthread_create(&t1,NULL,threadFunc,"Hello");
 		printf("Message from main()\n");
 
 		sleep(3);	

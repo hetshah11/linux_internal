@@ -35,8 +35,8 @@ int main()
 		pthread_join(thread1,NULL);
 		pthread_join(thread2,NULL);
 
-		pthread_join(thread1,NULL);
-		pthread_join(thread2,NULL);
+		// pthread_join(thread1,NULL);
+		// pthread_join(thread2,NULL);
 
 		printf("sharedVar=%d\n",sharedVar);
 

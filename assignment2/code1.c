@@ -9,6 +9,7 @@ int main()
 {
   int fd;
   fd = open("/home/het/Desktop/linux_internal/assignment2/file", O_RDONLY, 777);
+  
   printf("inherit file descriptor: %d\n",fd);  
 
   return 0;

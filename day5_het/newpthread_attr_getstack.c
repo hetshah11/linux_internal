@@ -13,6 +13,7 @@ void * Proc(void* param)
 int main()
 	{
 		pthread_attr_t Attr;
+		
 		pthread_t Id;
 		void *Stk;
 		size_t Siz;
