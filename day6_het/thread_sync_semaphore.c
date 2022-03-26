@@ -6,6 +6,7 @@
 int sharedVar=5;
 sem_t my_sem;
 
+
 void *thread_inc(void *arg)
 	{
 		sem_wait(&my_sem);

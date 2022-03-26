@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<sys/stat.h>
 #include<fcntl.h>
-#include<sys/mmman.h>
+#include<sys/mman.h>
 
 int main()
     {
@@ -9,6 +9,8 @@ int main()
         char *c;
 
         struct stat file_info;
+
+        
 
         fd=open("kernel.txt",O_CREAT | O_RDWR,0777);
         write(fd,"linux kernel technology",25);
