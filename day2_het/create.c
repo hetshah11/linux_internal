@@ -8,7 +8,7 @@ int main()
 		fd2=creat("two.txt",777);
 		fd3=creat("three.txt",777);
 
-		printf("file 1 id: %d\n",fd1);
+		printf("file 1 id:Hello how are you %d\n",fd1);
 		printf("file 2 id: %d\n",fd2);
 		printf("file 3 id: %d\n",fd3);
 
