@@ -1,0 +1,37 @@
+        -:    0:Source:pthread1.c
+        -:    0:Graph:pthread1.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:
+        -:    2:
+        -:    3:#include<stdio.h>
+        -:    4:#include<pthread.h>
+        -:    5:
+        -:    6:pthread_t tid;
+        -:    7:
+        -:    8:
+    #####:    9:void *thread1(void *arg)
+        -:   10:	{
+    #####:   11:		printf("newlt created thread is executing\n");
+    #####:   12:		return NULL;
+        -:   13:	}
+        -:   14:
+    #####:   15:int main(void)
+        -:   16:	{
+    #####:   17:		int ret= pthread_create(&tid,NULL,thread1,NULL);
+        -:   18:
+    #####:   19:		if(ret)
+    #####:   20:			printf("Thread is not created\n");
+        -:   21:		else
+    #####:   22:			printf("thread is created\n");
+        -:   23:
+        -:   24:			//sleep(2);
+        -:   25:
+    #####:   26:			pthread_join(tid,NULL);
+        -:   27:
+    #####:   28:		return 0;
+        -:   29:
+        -:   30:		
+        -:   31:	}
+        -:   32:	
